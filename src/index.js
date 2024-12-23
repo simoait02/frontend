@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ListStudents from "./ListStudents";
 import AddNote from "./AddNote";
 
-export default function AppRouter() { // Renamed to start with a capital letter
+export default function AppRouter() {
     return (
         <BrowserRouter>
             <Routes>

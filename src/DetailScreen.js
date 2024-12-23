@@ -4,7 +4,7 @@ import Column from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
 const DetailScreen = () => {
-    const { idEtudiant } = useParams(); // Get idEtudiant from URL
+    const { idEtudiant } = useParams();
     const [notes, setNotes] = useState([]);
     const [error, setError] = useState(null);
 
@@ -14,7 +14,7 @@ const DetailScreen = () => {
 
     const fetchNotes = async (idEtudiant) => {
         try {
-            const response = await fetch(`http://localhost:8080/Notes/${idEtudiant}`, {
+            const response = await fetch(`http://127.0.0.1:7000/Notes/${idEtudiant}`, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });

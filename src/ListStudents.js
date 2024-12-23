@@ -20,7 +20,7 @@ class ListStudents extends Component {
 
     fetchStudents = async () => {
         try {
-            const response = await fetch("http://localhost:8080/Etudiants", {
+            const response = await fetch("http://127.0.0.1:7000/Etudiants", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });
@@ -47,7 +47,7 @@ class ListStudents extends Component {
 
     fetchMoyenne = async (idEtudiant) => {
         try {
-            const response = await fetch(`http://localhost:8080/Notes/${idEtudiant}`, {
+            const response = await fetch(`http://127.0.0.1:7000/Notes/${idEtudiant}`, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });

@@ -31,7 +31,7 @@ const AddNote = () => {
 
     const addNote = async (name, value, etudiantId) => {
         try {
-            const response = await fetch("http://localhost:8080/Notes", {
+            const response = await fetch("http://127.0.0.1:7000/Notes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -56,7 +56,6 @@ const AddNote = () => {
         const { name, value } = event.target;
 
         if (name === "value") {
-            // Ensure the value stays between 0 and 20
             const sanitizedValue = Math.max(0, Math.min(20, value));
             setNote({
                 ...note,
@@ -99,8 +98,8 @@ const AddNote = () => {
                                 type="number"
                                 placeholder="Entrer la note"
                                 className="input"
-                                min="0" // Minimum value is 0
-                                max="20" // Maximum value is 20
+                                min="0"
+                                max="20"
                             />
                         </div>
                         <Button

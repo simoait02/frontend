@@ -11,7 +11,6 @@ class AddStudent extends Component {
         };
     }
 
-    // Function to handle form submission
     handleAddStudent = async () => {
         const { studentName } = this.state;
 
@@ -28,10 +27,9 @@ class AddStudent extends Component {
         }
     };
 
-    // API call to add a student
     addStudent = async (name) => {
         try {
-            const response = await fetch("http://localhost:8080/Etudiants", {
+            const response = await fetch("http://127.0.0.1:7000/Etudiants", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name }),
@@ -48,7 +46,6 @@ class AddStudent extends Component {
         }
     };
 
-    // Handle input changes
     handleInputChange = (event) => {
         this.setState({ studentName: event.target.value });
     };
